@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body{
+   font-family: 'Space Mono', monospace;
+   background-color:var(--clr-light-grayish-cyan);
+   
+   /* height: 100vh; */
+   display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   align-items: center;
+   justify-content: space-around;
+   padding-top: 2rem;
+   /* padding-bottom: 2rem; */
+}
+
+/* project css */
+.title{
+   height: 10vh; 
+  color:var(--clr-very-dark-cyan);
+}
+.main-container{
+  background-color:var(--clr-white);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  /* height: 80vh; */
+  gap: 2rem;
+  width: 98%;
+  padding: 2rem;
+  margin: auto;
+}
+
+.left-container{
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.form-control{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.error-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.error-msg{
+  display: none;
+  color: orangered;
+  font-size: 14px;
+}
+
+.section-title{
+  color: var(--clr-grayish-cyan);
+  font-size: 18px;
+}
+.input-bill,.input-people{
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-very-light-grayish-cyan);
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  text-align: end;
+  color: var(--clr-very-dark-cyan);
+}
+.input-bill{
+  background-image: url(../images/icon-dollar.svg);
+  background-position: 10px;
+  background-repeat: no-repeat;
+}
+.input-people{
+  background-image: url(../images/icon-person.svg);
+  background-position: 10px;
+  background-repeat: no-repeat;
+}
+.tip-percent{
+  background-color: var(--clr-very-dark-cyan);
+  color: var(--clr-white);
+  border: none;
+  font-size: 20px;
+}
+.custom-tip{
+  padding:0.5rem auto;
+  text-align: center;
+  font-size: 20px;
+}
+.tips-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 19rem;
+
+  margin: auto;
+}
+.tips-container input{
+  width: 9rem;
+  margin: auto;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+.right-container{
+  padding: 1.5rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background-color: var(--clr-very-dark-cyan);
+  border-radius: 10px;
+
+}
+.tip-amount-container,.total-amount-container{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.tip-para,.total-para{
+  font-size: 14px;
+  color: var(--clr-white);
+}
+.person{
+  font-size: 12px;
+  color: var(--clr-light-grayish-cyan);
+}
+.tip-amount,.total-amount{
+  font-size: 36px;
+  color: var(--clr-strong-cyan);
+}
+.output-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+
+.btn-reset{
+  height: 5vh;
+  background-color: var(--clr-strong-cyan);
+  border: none;
+  color: var(--clr-very-dark-cyan);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+@media screen and (min-width: 768px){
+  .main-container{
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-container{
+    width:50%;
+    
+  }
+  .right-container{
+    width:50%;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+  }
+  .tips-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width:21rem;
+    margin: auto;
+  }
+  .tips-container input{
+    width: 6.25rem;
+    margin: auto;
+    height: 3rem;
+    cursor: pointer;
+  }
+
+}

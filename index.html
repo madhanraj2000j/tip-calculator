@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1 class="title">SPLI<br />TTER</h1>
+    <main class="main-container">
+      <div class="left-container">
+        <div class="form-control">
+          <label for="bill" class="section-title">Bill</label>
+          <input type="number" id="bill" name="bill" class="input-bill input"/>
+        </div>
+        <div class="form-control">
+          <h2 class="section-title">Select-Tip%</h2>
+          <div class="tips-container">
+          <input type="button" id="tip-percent"  name="tip-percent" class="tip-percent" value="5">
+          <input type="button" id="tip-percent"  name="tip-percent" class="tip-percent" value="10">
+          <input type="button" id="tip-percent"  name="tip-percent" class="tip-percent" value="15">
+          <input type="button" id="tip-percent"  name="tip-percent" class="tip-percent" value="25">
+          <input type="button" id="tip-percent"  name="tip-percent" class="tip-percent" value="50">
+          <input type="number"  placeholder="Custom" class="custom-tip" id="custom-tip">
+          </div>
+          
+        </div>
+        <div class="form-control">
+          <div class="error-container">
+            <label for="People" class="section-title">Number of People</label>
+          <p class="error-msg" id="error-msg">#can't be zero</p>
+          </div>
+          <input type="number" id="people" name="people" class="input-people input"/>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="output-container">
+          <div class="tip-amount-container">
+            <p class="tip-para">Tip Amount <br /><span class="person"> / person</span></p>
+            <span class="tip-amount" id="amount">$5.34</span>
+          </div>
+         
+          <div class="total-amount-container">
+            <p class="total-para">Total <br /><span class="person"> / person</span></p>
+            <span class="total-amount" id="total">$8.34</span>
+          </div>
+          </div>
+        <button class="btn-reset" id="btn-reset">RESET</button>
+      </div>
+                 
+      
+    </main>
+    <!-- custom script -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
